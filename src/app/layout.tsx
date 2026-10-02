@@ -7,7 +7,7 @@ const hand = Caveat({ subsets: ["latin"], variable: "--font-hand", weight: ["500
 
 export const metadata: Metadata = {
   title: "Back Bencher: Exam Cheating Simulator",
-  description: "A top-down comedy stealth game. Phone under the desk, eyes on the teacher.",
+  description: "A first-person comedy stealth game. Phone under the desk, eyes on the teacher.",
 };
 
 export const viewport: Viewport = {

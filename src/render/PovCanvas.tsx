@@ -39,7 +39,7 @@ export function PovCanvas({ source, yaw, look, duck, pose, onPaper, demo, mode =
     const family = getComputedStyle(document.body).getPropertyValue("--font-hand");
     setPovHandFont(family);
     const logo = new Image();
-    logo.src = "/aiub-logo.png";
+    logo.src = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/aiub-logo.png`;
     setBoardLogo(logo);
     setHandFont(family);
 

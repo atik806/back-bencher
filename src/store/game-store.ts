@@ -179,8 +179,12 @@ export const useGame = create<Store>((set, get) => {
   };
 
   const frame = (now: number) => {
+    // Stop the loop between games; startLevel() restarts it via ensureLoop().
+    if (!engine) {
+      raf = 0;
+      return;
+    }
     raf = requestAnimationFrame(frame);
-    if (!engine) return;
     const dt = Math.min(0.1, (now - lastFrame) / 1000);
     lastFrame = now;
     acc += dt;
